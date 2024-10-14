@@ -1370,33 +1370,41 @@
       }
 
       .btn-body .btn-items a {
-    animation: rainbow 3s linear infinite;
-    transition: all .4s;
-    color: #fff;
+    animation: rainbow 3s linear infinite; /* Efek animasi pada tombol */
+    transition: all .4s ease-in-out; /* Efek transisi */
     text-decoration: none;
-    width: 100%;
-    padding: 10px 0px;
-    color: #000000;
-    background: -webkit-linear-gradient(top, #27374c, #27374c 100%);
-    border-radius: 15px;
-    display: inline-block;
+    color: #fff; /* Warna teks putih */
+    width: 100%; 
+    padding: 15px 0px; /* Padding yang lebih besar untuk memperbesar tombol */
+    color: #000000; 
+    background: -webkit-linear-gradient(top, #27374c, #27374c 100%); /* Gradien background */
+    border-radius: 15px; 
+    display: inline-block; 
     text-align: center;
-    overflow: hidden;
     position: relative;
-    border: 5px solid;
+    border: 5px solid; /* Lebar border */
+    overflow: hidden; 
     background-clip: border-box;
+    font-size: 20px; /* Ukuran font yang lebih besar untuk teks */
+    font-weight: bold; /* Teks tebal */
+    letter-spacing: 2px; /* Spasi antar huruf */
 }
 
+.btn-body .btn-items a:hover {
+    background: linear-gradient(45deg, #ff6a00, #ff0000, #00ff00, #0000ff);
+    border-color: transparent; /* Menghilangkan border saat hover */
+    color: #fff; /* Warna teks berubah jadi putih saat hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Efek glow pada tombol */
+    transform: scale(1.05); /* Sedikit memperbesar tombol saat hover */
+}
+
+/* Animasi rainbow untuk membuat efek warna pelangi */
 @keyframes rainbow {
-    0% {
-        border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
-    }
-    50% {
-        border-image: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet) 1;
-    }
-    100% {
-        border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
-    }
+    0% { border-color: #ff0000; }
+    25% { border-color: #00ff00; }
+    50% { border-color: #0000ff; }
+    75% { border-color: #ff00ff; }
+    100% { border-color: #ff0000; }
 }
 
         
